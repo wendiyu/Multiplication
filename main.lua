@@ -7,7 +7,7 @@
 -- multiply the number
 -----------------------------------------------------------------------------------------
 
-local answer = display.newText( "", 1000, 1150, native.systemFont, 100 )
+local answer = display.newText( "", 1700, 770, native.systemFont, 100 )
 
 local instruction1 = display.newText( "Enter two integer number: ", 1000, 200, native.systemFont, 120 )
 
