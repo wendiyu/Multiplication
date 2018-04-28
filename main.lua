@@ -38,6 +38,14 @@ local function Multiplication( event )
 			numberUser2 = numberUser2 - 1
 		until numberUser2 == 0
 			answer.text = additon
+	elseif (numberUser1 < 0 or numberUser2 < 0 ) then
+		repeat
+			additon = additon + (-numberUser1)
+			numberUser2 = numberUser2 + 1
+		until numberUser2 == 0
+			answer.text = additon
+	elseif (numberUser1 == 0 or numberUser2 == 0) then
+		answer.text = additon
 	end
 end
 
