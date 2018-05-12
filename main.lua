@@ -32,20 +32,33 @@ local function Multiplication( event )
 	local numberUser2 = tonumber(number2TextField.text)
 	local additon = 0
 
-	if (numberUser1 > 0) and (numberUser2 > 0) then
+	if (numberUser1 > 0) and (numberUser2 > 0)  then
 		repeat
 			additon = additon + numberUser1
 			numberUser2 = numberUser2 - 1
 		until numberUser2 == 0
 			answer.text = additon
-	elseif (numberUser1 < 0 or numberUser2 < 0 ) then
+	elseif  (numberUser1 < 0 and numberUser2 < 0 ) then
 		repeat
 			additon = additon + (-numberUser1)
 			numberUser2 = numberUser2 + 1
 		until numberUser2 == 0
 			answer.text = additon
+	elseif  (numberUser1 < 0 ) then
+		repeat
+			additon = additon + (numberUser1)
+			numberUser2 = numberUser2 - 1
+		until numberUser2 == 0
+			answer.text = additon
+	elseif  (numberUser2 < 0 ) then
+		repeat
+			additon = additon - (numberUser1)
+			numberUser2 = numberUser2 + 1
+		until numberUser2 == 0
+			answer.text = additon
 	elseif (numberUser1 == 0 or numberUser2 == 0) then
 		answer.text = additon
+	
 	end
 end
 
